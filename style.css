@@ -1,0 +1,786 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+
+}
+
+
+
+:root {
+
+    --bg:
+        linear-gradient(200deg, #1e0430, #0d0a0f);
+
+    --text: white;
+
+    --card:
+        rgba(7, 7, 7, 0.884);
+
+    --blue: #0879aa;
+
+}
+
+
+
+.light {
+
+
+    --bg:
+        line-height(135deg, #c2e5fd, #eeb1b1);
+
+
+    --text: #0f172a;
+
+
+    --card:
+        rgba(0, 0, 0, .08);
+
+
+
+}
+
+
+
+body {
+
+    background: var(--bg);
+
+    color: var(--text);
+
+    transition: .5s;
+
+    min-height: 100vh;
+
+}
+
+
+
+
+
+header {
+
+    padding: 25px 10%;
+
+
+}
+
+
+
+nav {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+
+}
+
+
+
+.logo {
+
+    font-size: 40px;
+
+}
+
+
+.logo span {
+
+    color: var(--blue);
+
+}
+
+
+
+
+ul {
+
+    display: flex;
+
+    gap: 30px;
+
+    list-style: none;
+
+}
+
+
+
+ul a {
+
+    color: var(--text);
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+}
+
+
+
+#mode {
+
+    background: var(--card);
+
+    border: none;
+
+    padding: 12px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+}
+
+
+
+
+
+.hero {
+
+    min-height: 90vh;
+
+    display: flex;
+
+    justify-content: space-around;
+
+    align-items: center;
+
+    padding: 50px;
+
+}
+
+
+
+.hero h1 {
+
+    font-size: 60px;
+
+}
+
+
+
+.hero span {
+
+    color: var(--blue);
+
+}
+
+
+
+.hero p {
+
+    max-width: 450px;
+
+    margin: 20px 0;
+
+    line-height: 1.7;
+
+}
+.box p{
+    font-size: 25px;
+}
+
+
+
+
+.btn {
+
+    background: var(--blue);
+
+    padding: 14px 35px;
+
+    border-radius: 30px;
+
+    color: black;
+
+    text-decoration: none;
+
+    margin-right: 10px;
+
+}
+
+
+
+.outline {
+
+    background: transparent;
+
+    border: 2px solid var(--blue);
+
+    color: var(--text);
+
+}
+
+
+
+
+
+.profile img {
+
+    width: 350px;
+    height: 390px;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 40px var(--blue);
+
+}
+
+
+
+
+section {
+
+    padding: 80px 10%;
+
+}
+
+
+
+.title {
+
+    text-align: center;
+
+    font-size: 40px;
+
+    margin-bottom: 40px;
+
+}
+
+
+
+
+.box,
+.card,
+.project {
+
+
+    background: var(--card);
+
+    backdrop-filter: blur(15px);
+
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+
+}
+
+
+
+.cards,
+.projects {
+
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+
+
+}
+
+
+
+.card {
+
+    text-align: center;
+
+    width: 180px;
+
+    background:rgba(0,0,0,0.65);
+
+    padding:15px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    box-shadow:0 0 15px black;
+
+    transition:0.4s;
+
+    cursor:pointer;
+    color: #ffffff;
+
+}
+
+
+
+.card:hover,
+.project:hover {
+
+    transform: translateY(-15px) scale(1.03);
+
+
+    box-shadow:
+
+        40px 40px 40px rgba(104, 105, 105, 0.699);
+
+
+}
+
+
+
+
+
+
+.card i {
+
+    font-size: 50px;
+
+    color: var(--blue);
+
+}
+
+
+
+
+
+.project{
+
+
+    background:rgba(0,0,0,0.65);
+
+    padding:15px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    box-shadow:0 0 15px black;
+
+    transition:0.4s;
+
+    cursor:pointer;
+    color: white;
+
+
+}
+
+
+
+
+
+.project img{
+
+
+    width:100%;
+
+    height:160px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+
+}
+
+
+
+.project h2{
+
+    margin:15px 0;
+
+    color:white;
+
+}
+.project p{
+    width: 400px;
+}
+.project button{
+    background: #0f172a;
+    border-radius: 5px;
+    color: white;
+    height: 50px;
+    width: 80px;
+}
+
+
+
+
+.social {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+
+}
+
+
+
+.social a {
+
+    font-size: 40px;
+
+    color: var(--blue);
+
+    transition: .3s;
+    background-color: transparent;
+
+}
+
+
+
+.social a:hover {
+
+    transform: translateY(-15px) scale(1.03);
+
+
+    box-shadow:
+
+        0 20px 40px rgba(151, 148, 148, 0.89);
+
+
+
+}
+
+
+
+
+footer {
+
+    text-align: center;
+
+    padding: 20px;
+
+}
+/* ================= Responsive Design ================= */
+
+
+@media (max-width: 900px){
+
+
+    header{
+
+        padding:20px 5%;
+
+    }
+
+
+
+    nav{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+
+
+    .logo{
+
+        font-size:32px;
+
+    }
+
+
+
+    ul{
+
+        gap:15px;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+
+
+    .hero{
+
+        flex-direction:column-reverse;
+
+        text-align:center;
+
+        padding:40px 20px;
+
+        gap:40px;
+
+    }
+
+
+
+    .hero h1{
+
+        font-size:45px;
+
+    }
+
+
+
+    .hero p{
+
+        max-width:100%;
+
+    }
+
+
+
+    .profile img{
+
+        width:250px;
+
+    }
+
+
+
+    section{
+
+        padding:60px 5%;
+
+    }
+
+
+
+    .title{
+
+        font-size:32px;
+
+    }
+
+
+
+    .box p{
+
+        font-size:20px;
+
+    }
+
+
+
+    .cards,
+    .projects{
+
+        gap:20px;
+
+    }
+
+
+
+    .project p{
+
+        width:100%;
+
+    }
+
+
+
+}
+
+
+
+
+
+@media (max-width:600px){
+
+
+    body{
+
+        overflow-x:hidden;
+
+    }
+
+
+
+    header{
+
+        padding:15px;
+
+    }
+
+
+
+    nav{
+
+        gap:15px;
+
+    }
+
+
+
+    .logo{
+
+        font-size:28px;
+
+    }
+
+
+
+    ul{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:15px;
+
+    }
+
+
+
+    ul a{
+
+        font-size:16px;
+
+    }
+
+
+
+    #mode{
+
+        padding:10px;
+
+    }
+
+
+
+    .hero{
+
+        min-height:auto;
+
+        padding:30px 15px;
+
+    }
+
+
+
+    .hero h1{
+
+        font-size:35px;
+
+    }
+
+
+
+    .hero p{
+
+        font-size:15px;
+
+    }
+
+
+
+    .btn{
+
+        display:inline-block;
+
+        padding:12px 25px;
+
+        margin:8px;
+
+    }
+
+
+
+    .profile img{
+
+        width:200px;
+
+    }
+
+
+
+    section{
+
+        padding:40px 15px;
+
+    }
+
+
+
+    .title{
+
+        font-size:28px;
+
+    }
+
+
+
+    .box,
+    .card,
+    .project{
+
+        padding:20px;
+
+        width:100%;
+
+    }
+
+
+
+    .card{
+
+        width:100%;
+
+        max-width:300px;
+
+    }
+
+
+
+    .project img{
+
+        height:180px;
+
+    }
+
+
+
+    .project h2{
+
+        font-size:20px;
+
+    }
+
+
+
+    .project p{
+
+        width:100%;
+
+        font-size:14px;
+
+    }
+
+
+
+    .social{
+
+        gap:20px;
+
+    }
+
+
+
+    .social a{
+
+        font-size:32px;
+
+    }
+
+
+
+    footer{
+
+        font-size:14px;
+
+    }
+
+
+}
